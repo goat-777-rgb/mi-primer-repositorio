@@ -1,0 +1,15 @@
+name: Mi primer workflow
+ 
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+ 
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Revisar el codigo
+        uses: actions/checkout@v4
+      - name: Mostrar mensaje
+        run: echo "Hola desde GitHub Actions"
